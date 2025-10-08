@@ -80,11 +80,11 @@ button:focus-visible {
 
 .app {
   display: grid;
-  /* grid-template-columns: 300px 2fr; */
   grid-template-columns: 220px minmax(0, 1fr);
   gap: 40px;
   padding: 32px;
   min-height: 100vh;
+  min-width: 56vw;
   box-sizing: border-box;
 }
 
