@@ -45,7 +45,6 @@ export const DynamicForm: React.FC<Props> = ({ schema, onSubmit, submitLabel = "
                     message: field.validation.message ?? `${field.label} is invalid`
                 };
             } catch {
-                // ignore invalid regex (same behavior as before)
                 console.error("Invalid regex pattern for field:", field.name);
             }
         }
@@ -138,9 +137,9 @@ export const DynamicForm: React.FC<Props> = ({ schema, onSubmit, submitLabel = "
                                 setValue(field.name, values, { shouldValidate: true, shouldDirty: true });
                             }}
                             onBlur={() => {
-                                // optional: trigger validation on blur by re-setting the value with current value
+                                // trigger validation on blur by re-setting the value with current value
                                 const current = (watch() as any)[field.name];
-                                // if current is undefined, ensure it's an array (safe-guard)
+                                // if current is undefined, ensure it's an array
                                 setValue(field.name, Array.isArray(current) ? current : [], { shouldValidate: true, shouldDirty: false });
                             }}
                             disabled={field.disabled}

@@ -28,7 +28,7 @@ const userRegistrationSchema: FormSchema = {
   ]
 };
 
-// Bonus schema: shows conditional rendering & readonly/hidden example
+// shows conditional rendering & readonly/hidden example
 const conditionalSchema: FormSchema = {
   title: "Conditional Survey",
   fields: [
@@ -75,14 +75,14 @@ export default function App() {
       <div className="content">
         <DynamicForm schema={currentSchema} onSubmit={(v) => setLastOutput(v)} />
 
-        {/* <div className="output">
+        <div className="output">
           <h3>Submitted Output</h3>
           {lastOutput ? (
             <pre>{JSON.stringify(lastOutput, null, 2)}</pre>
           ) : (
             <div className="muted">No submission yet. Submit the form to see structured output here (and in console).</div>
           )}
-        </div> */}
+        </div>
       </div>
     </div>
   );

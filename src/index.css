@@ -183,9 +183,8 @@ button[type="submit"] {
 }
 
 .output {
-  width: 100% !important;
   box-sizing: border-box;
-  min-width: 320px;
+  min-width: 56vw;
   margin-top: 20px;
   background: #f8fafc;
   padding: 12px;
